@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CyberSec</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Cyber Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ffcc',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-white font-sans antialiased">
+
+    <!-- Header & Navigation Section -->
+    <header class="bg-dark border-b border-gray-800 px-6 py-4 sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <a href="../../index.html" class="flex items-center gap-2 group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neon group-hover:drop-shadow-[0_0_8px_rgba(0,255,204,0.8)] transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-2xl font-bold tracking-widest text-white group-hover:text-neon transition-colors">CYBER<span class="text-neon">SEC</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="../../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="text-neon border-b-2 border-neon pb-1">About</a>
+                <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="contact.html" class="border border-neon text-neon px-5 py-2 rounded hover:bg-neon hover:text-darker font-semibold transition-all">
+                    Get Secure
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- About Mission Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24 text-center">
+            <div class="inline-block px-4 py-1 rounded-full bg-gray-900 border border-gray-700 text-neon text-sm font-semibold mb-6">
+                WHO WE ARE
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-8">Defending the <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-500">Digital Frontier</span></h1>
+            <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                At CyberSec, we believe that security is a fundamental right in the digital age. Our mission is to empower organizations by providing military-grade cybersecurity solutions that stay one step ahead of evolving global threats. We monitor, detect, and neutralize.
+            </p>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-dark border-y border-gray-800 py-16 mb-20">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-700">
+                <div class="py-4 md:py-0">
+                    <h3 class="text-5xl font-black text-neon mb-2">99.9%</h3>
+                    <p class="text-gray-400 font-medium uppercase tracking-wider text-sm">Threats Mitigated</p>
+                </div>
+                <div class="py-4 md:py-0">
+                    <h3 class="text-5xl font-black text-neon mb-2">24/7</h3>
+                    <p class="text-gray-400 font-medium uppercase tracking-wider text-sm">Active Monitoring</p>
+                </div>
+                <div class="py-4 md:py-0">
+                    <h3 class="text-5xl font-black text-neon mb-2">500+</h3>
+                    <p class="text-gray-400 font-medium uppercase tracking-wider text-sm">Global Clients</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Experts Section -->
+        <section class="max-w-7xl mx-auto px-6 py-10 mb-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Security <span class="text-neon">Experts</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Meet the elite team of ethical hackers and security analysts protecting your business infrastructure.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Member 1 (Article & Figure mapping) -->
+                <article class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-neon transition-all duration-300 hover:-translate-y-2 group">
+                    <figure class="w-24 h-24 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-4 border-2 border-transparent group-hover:border-neon transition-all overflow-hidden">
+                        <img src="../assets/mujtaba.jpeg" alt="Ahmad mujtaba" class="w-full h-full object-cover">
+                    </figure>
+                    <h3 class="text-xl font-bold text-white mb-1">Ahmad mujtaba</h3>
+                    <p class="text-neon text-sm font-medium mb-3">Lead Penetration Tester</p>
+                    <p class="text-gray-400 text-sm">Offensive security expert with 10+ years of finding critical vulnerabilities.</p>
+                </article>
+
+                <!-- Team Member 2 -->
+                <article class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-neon transition-all duration-300 hover:-translate-y-2 group">
+                    <figure class="w-24 h-24 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-4 border-2 border-transparent group-hover:border-neon transition-all overflow-hidden">
+                        <img src="../assets/afeef.png" alt="Afeef-ul-hussain" class="w-full h-full object-cover">
+                    </figure>
+                    <h3 class="text-xl font-bold text-white mb-1">Afeef-ul-hussain</h3>
+                    <p class="text-neon text-sm font-medium mb-3">Chief Information Security Officer</p>
+                    <p class="text-gray-400 text-sm">Strategic leader in risk management, compliance, and enterprise defense.</p>
+                </article>
+
+                <!-- Team Member 3 -->
+                <article class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-neon transition-all duration-300 hover:-translate-y-2 group">
+                    <figure class="w-24 h-24 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-4 border-2 border-transparent group-hover:border-neon transition-all">
+                        <svg class="w-12 h-12 text-gray-500 group-hover:text-neon transition-colors" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                    </figure>
+                    <h3 class="text-xl font-bold text-white mb-1">Dr.Irfan</h3>
+                    <p class="text-neon text-sm font-medium mb-3">Cloud Security Architect</p>
+                    <p class="text-gray-400 text-sm">Specializes in securing AWS and Azure infrastructure with zero-trust models.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-6 pt-4 border-t border-gray-800 text-center flex flex-col items-center gap-4">
+            <p class="text-gray-500 text-sm">&copy; 2026 CyberSec. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-darker z-50 flex-col items-center justify-center space-y-8 text-2xl font-bold">
+        <button id="close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-neon" aria-label="Close Menu">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="index.html" class="text-neon">Home</a>
+        <a href="src/pages/about.html" class="text-white hover:text-neon transition-colors">About</a>
+        <a href="src/pages/services.html" class="text-white hover:text-neon transition-colors">Services</a>
+        <a href="src/pages/contact.html" class="text-white hover:text-neon transition-colors">Contact</a>
+    </div>
+
+    <script>
+        const mobileBtn = document.querySelector('nav button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    </script>
+</body>
+</html>

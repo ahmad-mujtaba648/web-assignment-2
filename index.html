@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec - Advanced Protection</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Customizing Tailwind Colors for Cyber Security Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ffcc', // Cyber neon cyan/green color
+                        dark: '#0f172a', // Slate 900
+                        darker: '#020617', // Slate 950
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-white font-sans antialiased">
+
+    <!-- Header Section (Div replaced with header) -->
+    <header class="bg-dark border-b border-gray-800 px-6 py-4 sticky top-0 z-50">
+        <!-- Nav Section (Div replaced with nav wrapper grouping) -->
+        <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Logo with Shield Icon -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neon group-hover:drop-shadow-[0_0_8px_rgba(0,255,204,0.8)] transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-2xl font-bold tracking-widest text-white group-hover:text-neon transition-colors">CYBER<span class="text-neon">SEC</span></span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-neon border-b-2 border-neon pb-1">Home</a>
+                <a href="src/pages/about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="src/pages/services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                <a href="src/pages/contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <!-- Call to Action Button -->
+            <div class="hidden md:flex items-center gap-6">
+                <a href="src/pages/login.html" class="text-gray-300 hover:text-neon font-medium transition-colors">
+                    Sign In
+                </a>
+                <a href="src/pages/contact.html" class="border border-neon text-neon px-5 py-2 rounded hover:bg-neon hover:text-darker font-semibold transition-all shadow-[0_0_10px_rgba(0,255,204,0.2)] hover:shadow-[0_0_15px_rgba(0,255,204,0.6)]">
+                    Get Secure
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="md:hidden text-gray-400 hover:text-neon" aria-label="Toggle Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Container Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12 overflow-hidden">
+            
+            <!-- Background Neon Glow -->
+            <div class="absolute top-20 left-10 w-72 h-72 bg-neon rounded-full mix-blend-multiply filter blur-[128px] opacity-20 pointer-events-none"></div>
+
+            <!-- Left Side: Text & Buttons -->
+            <div class="flex-1 space-y-6 z-10">
+                <!-- Live Status Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-900 border border-gray-700 text-neon text-xs font-semibold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                    System Secure
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-black text-white leading-tight">
+                    Next-Gen <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-500">Cyber Defense</span>
+                </h1>
+                
+                <p class="text-gray-400 text-lg max-w-lg">
+                    Protect your digital infrastructure with advanced threat detection, real-time monitoring, and military-grade encryption.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#" class="bg-neon text-darker px-8 py-3 rounded font-bold hover:bg-white transition-colors shadow-[0_0_15px_rgba(0,255,204,0.4)] hover:shadow-[0_0_25px_rgba(0,255,204,0.6)]">
+                        Start Free Scan
+                    </a>
+                    <a href="src/pages/services.html" class="border border-gray-600 text-white px-8 py-3 rounded font-bold hover:border-neon hover:text-neon transition-colors">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Terminal Window Visual -->
+            <div class="flex-1 w-full z-10">
+                <div class="bg-gray-900 rounded-lg border border-gray-800 shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-500">
+                    <!-- Terminal Header -->
+                    <div class="bg-gray-800 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-2 text-xs text-gray-400 font-mono">root@cybersec:~</span>
+                    </div>
+                    <!-- Terminal Body -->
+                    <div class="p-6 font-mono text-sm text-gray-300 space-y-3 h-72">
+                        <p class="text-neon">$ init network_scan --deep</p>
+                        <p class="text-gray-500">Initializing protocols...</p>
+                        <p>&gt; [OK] Firewall integrity verified</p>
+                        <p>&gt; [OK] Quantum encryption active</p>
+                        <p class="text-yellow-400">&gt; [WARN] 3 unauthorized access attempts blocked</p>
+                        <p class="text-white mt-4">System Status: <span class="text-neon font-bold">100% SECURE</span></p>
+                        <p class="text-neon inline-block border-r-8 border-neon pr-1 animate-pulse mt-2">_</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Capabilities Section -->
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            
+            <!-- Section Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core <span class="text-neon">Capabilities</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Enterprise-grade security solutions designed to detect, prevent, and respond to modern cyber threats.</p>
+            </div>
+
+            <!-- Cards Grid (Article components used as per image mapping) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <article class="bg-gray-900 border border-gray-800 rounded-lg p-8 hover:border-neon transition-all duration-300 hover:-translate-y-2 group cursor-pointer">
+                    <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-neon transition-colors">Threat Detection</h3>
+                    <p class="text-gray-400 text-sm">AI-powered monitoring systems that identify and neutralize threats before they breach your network.</p>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="bg-gray-900 border border-gray-800 rounded-lg p-8 hover:border-neon transition-all duration-300 hover:-translate-y-2 group cursor-pointer">
+                    <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-neon transition-colors">Cloud Security</h3>
+                    <p class="text-gray-400 text-sm">Complete protection for your cloud infrastructure, ensuring data privacy and regulatory compliance.</p>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="bg-gray-900 border border-gray-800 rounded-lg p-8 hover:border-neon transition-all duration-300 hover:-translate-y-2 group cursor-pointer">
+                    <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-neon transition-colors">Zero Trust Access</h3>
+                    <p class="text-gray-400 text-sm">Strict identity verification for every person and device attempting to access resources on a private network.</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section (Div replaced with footer) -->
+    <footer class="bg-dark border-t border-gray-800 pt-16 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            
+            <!-- Brand & About -->
+            <div class="md:col-span-2">
+                <a href="index.html" class="flex items-center gap-2 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span class="text-xl font-bold tracking-widest text-white">CYBER<span class="text-neon">SEC</span></span>
+                </a>
+                <p class="text-gray-400 text-sm max-w-sm">
+                    Securing the digital frontier. We provide enterprise-grade cybersecurity solutions to protect your data, infrastructure, and future against modern threats.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="text-gray-400 hover:text-neon transition-colors">Home</a></li>
+                    <li><a href="src/pages/about.html" class="text-gray-400 hover:text-neon transition-colors">About Us</a></li>
+                    <li><a href="src/pages/services.html" class="text-gray-400 hover:text-neon transition-colors">Services</a></li>
+                    <li><a href="src/pages/contact.html" class="text-gray-400 hover:text-neon transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Legal</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="text-gray-400 hover:text-neon transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-neon transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-neon transition-colors">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-sm">&copy; 2026 CyberSec. All rights reserved.</p>
+            <p class="text-gray-500 text-sm">Designed with secure code.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-darker z-50 flex-col items-center justify-center space-y-8 text-2xl font-bold">
+        <button id="close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-neon" aria-label="Close Menu">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="index.html" class="text-neon">Home</a>
+        <a href="src/pages/about.html" class="text-white hover:text-neon transition-colors">About</a>
+        <a href="src/pages/services.html" class="text-white hover:text-neon transition-colors">Services</a>
+        <a href="src/pages/contact.html" class="text-white hover:text-neon transition-colors">Contact</a>
+    </div>
+
+    <script>
+        const mobileBtn = document.querySelector('nav button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    </script>
+</body>
+</html>

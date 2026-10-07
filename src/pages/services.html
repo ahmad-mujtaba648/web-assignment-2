@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - CyberSec</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Cyber Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ffcc',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-white font-sans antialiased">
+
+    <!-- Header & Navbar Section -->
+    <header class="bg-dark border-b border-gray-800 px-6 py-4 sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <a href="../../index.html" class="flex items-center gap-2 group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neon group-hover:drop-shadow-[0_0_8px_rgba(0,255,204,0.8)] transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-2xl font-bold tracking-widest text-white group-hover:text-neon transition-colors">CYBER<span class="text-neon">SEC</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="../../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                <!-- Services link is active now -->
+                <a href="services.html" class="text-neon border-b-2 border-neon pb-1">Services</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="contact.html" class="border border-neon text-neon px-5 py-2 rounded hover:bg-neon hover:text-darker font-semibold transition-all shadow-[0_0_10px_rgba(0,255,204,0.2)] hover:shadow-[0_0_15px_rgba(0,255,204,0.6)]">
+                    Get Secure
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- Services Header Section -->
+        <section class="max-w-7xl mx-auto px-6 pt-20 pb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-6">Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-500">Security Solutions</span></h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Comprehensive cyber protection tailored for modern enterprises. Explore our core offerings below.</p>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="max-w-7xl mx-auto px-6 pb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Pen Testing -->
+                <article class="bg-dark border border-gray-800 p-8 rounded-lg hover:border-neon transition-colors group">
+                    <div class="w-12 h-12 bg-gray-900 rounded flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Penetration Testing</h3>
+                    <p class="text-gray-400 text-sm mb-6">We simulate real-world cyber attacks on your network and applications to identify vulnerabilities before hackers do.</p>
+                    <a href="contact.html" class="text-neon text-sm font-semibold hover:underline">Request Audit &rarr;</a>
+                </article>
+
+                <!-- Service 2: Incident Response -->
+                <article class="bg-dark border border-gray-800 p-8 rounded-lg hover:border-neon transition-colors group">
+                    <div class="w-12 h-12 bg-gray-900 rounded flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Incident Response</h3>
+                    <p class="text-gray-400 text-sm mb-6">24/7 rapid response team ready to contain, eradicate, and recover your systems during an active cyber attack.</p>
+                    <a href="contact.html" class="text-neon text-sm font-semibold hover:underline">Get Support &rarr;</a>
+                </article>
+
+                <!-- Service 3: Security Training -->
+                <article class="bg-dark border border-gray-800 p-8 rounded-lg hover:border-neon transition-colors group">
+                    <div class="w-12 h-12 bg-gray-900 rounded flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Employee Training</h3>
+                    <p class="text-gray-400 text-sm mb-6">Turn your workforce into a human firewall. We offer comprehensive phishing simulations and awareness training.</p>
+                    <a href="contact.html" class="text-neon text-sm font-semibold hover:underline">Learn More &rarr;</a>
+                </article>
+                
+                <!-- Service 4: Endpoint Protection -->
+                <article class="bg-dark border border-gray-800 p-8 rounded-lg hover:border-neon transition-colors group">
+                    <div class="w-12 h-12 bg-gray-900 rounded flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Endpoint Protection</h3>
+                    <p class="text-gray-400 text-sm mb-6">Advanced malware and ransomware protection for all laptops, servers, and mobile devices across your organization.</p>
+                    <a href="contact.html" class="text-neon text-sm font-semibold hover:underline">View Details &rarr;</a>
+                </article>
+
+                <!-- Service 5: Network Monitoring -->
+                <article class="bg-dark border border-gray-800 p-8 rounded-lg hover:border-neon transition-colors group">
+                    <div class="w-12 h-12 bg-gray-900 rounded flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">24/7 SOC Monitoring</h3>
+                    <p class="text-gray-400 text-sm mb-6">Continuous network monitoring by our Security Operations Center to detect and block suspicious activities in real-time.</p>
+                    <a href="contact.html" class="text-neon text-sm font-semibold hover:underline">Learn More &rarr;</a>
+                </article>
+
+                <!-- Service 6: Data Encryption -->
+                <article class="bg-dark border border-gray-800 p-8 rounded-lg hover:border-neon transition-colors group">
+                    <div class="w-12 h-12 bg-gray-900 rounded flex items-center justify-center mb-6 group-hover:bg-teal-900 transition-colors">
+                        <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Data Encryption</h3>
+                    <p class="text-gray-400 text-sm mb-6">Military-grade encryption services for data at rest and in transit, ensuring compliance with global privacy laws.</p>
+                    <a href="contact.html" class="text-neon text-sm font-semibold hover:underline">View Details &rarr;</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Our Working Process Section -->
+        <section class="max-w-7xl mx-auto px-6 pb-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Our Security <span class="text-neon">Approach</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">A proven 4-step methodology to ensure your business remains impenetrable.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting line for desktop -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-800 -z-10 -translate-y-1/2"></div>
+                
+                <!-- Step 1 -->
+                <article class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-darker border-2 border-neon text-neon rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-[0_0_15px_rgba(0,255,204,0.3)] group-hover:scale-110 transition-transform">1</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Audit & Discovery</h4>
+                    <p class="text-gray-400 text-sm">We analyze your current infrastructure to find critical vulnerabilities.</p>
+                </article>
+                
+                <!-- Step 2 -->
+                <article class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-darker border-2 border-gray-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-neon group-hover:text-neon transition-colors">2</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Strategy Plan</h4>
+                    <p class="text-gray-400 text-sm">Customizing a defense architecture tailored specifically to your needs.</p>
+                </article>
+                
+                <!-- Step 3 -->
+                <article class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-darker border-2 border-gray-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-neon group-hover:text-neon transition-colors">3</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Implementation</h4>
+                    <p class="text-gray-400 text-sm">Deploying advanced firewalls, encryption, and endpoint protection.</p>
+                </article>
+                
+                <!-- Step 4 -->
+                <article class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-darker border-2 border-gray-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-neon group-hover:text-neon transition-colors">4</div>
+                    <h4 class="text-lg font-bold text-white mb-2">24/7 Monitoring</h4>
+                    <p class="text-gray-400 text-sm">Continuous active tracking to neutralize threats in real-time.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Industries We Protect Section -->
+        <section class="bg-dark border-y border-gray-800 py-16 mb-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Industries We <span class="text-neon">Protect</span></h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-neon hover:-translate-y-1 transition-all cursor-pointer">
+                        <h4 class="text-white font-bold">Finance & Banking</h4>
+                    </div>
+                    <div class="p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-neon hover:-translate-y-1 transition-all cursor-pointer">
+                        <h4 class="text-white font-bold">Healthcare</h4>
+                    </div>
+                    <div class="p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-neon hover:-translate-y-1 transition-all cursor-pointer">
+                        <h4 class="text-white font-bold">E-Commerce</h4>
+                    </div>
+                    <div class="p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-neon hover:-translate-y-1 transition-all cursor-pointer">
+                        <h4 class="text-white font-bold">Government</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="max-w-7xl mx-auto px-6 py-16 mb-12">
+            <div class="bg-gradient-to-r from-gray-900 to-dark border border-gray-700 rounded-2xl p-10 text-center md:flex md:items-center md:justify-between md:text-left shadow-2xl">
+                <div class="md:max-w-2xl">
+                    <h2 class="text-3xl font-bold text-white mb-4">Need a Custom Security Strategy?</h2>
+                    <p class="text-gray-400">Every business is unique. Contact our experts to design a tailored cybersecurity plan that fits your specific needs and budget.</p>
+                </div>
+                <div class="mt-8 md:mt-0 flex-shrink-0">
+                    <a href="contact.html" class="bg-neon text-darker px-8 py-4 rounded font-bold hover:bg-white transition-colors inline-block shadow-[0_0_15px_rgba(0,255,204,0.4)]">
+                        Get a Free Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2026 CyberSec. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-darker z-50 flex-col items-center justify-center space-y-8 text-2xl font-bold">
+        <button id="close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-neon" aria-label="Close Menu">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="index.html" class="text-neon">Home</a>
+        <a href="src/pages/about.html" class="text-white hover:text-neon transition-colors">About</a>
+        <a href="src/pages/services.html" class="text-white hover:text-neon transition-colors">Services</a>
+        <a href="src/pages/contact.html" class="text-white hover:text-neon transition-colors">Contact</a>
+    </div>
+
+    <script>
+        const mobileBtn = document.querySelector('nav button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    </script>
+</body>
+</html>

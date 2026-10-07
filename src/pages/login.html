@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - CyberSec</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Cyber Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ffcc',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-white font-sans antialiased min-h-screen flex flex-col relative overflow-hidden">
+
+    <!-- Background Cyber Grid Effect -->
+    <div class="absolute inset-0 z-0 opacity-10" style="background-image: linear-gradient(#00ffcc 1px, transparent 1px), linear-gradient(90deg, #00ffcc 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    <!-- Header & Simple Navbar for Auth Pages -->
+    <header class="p-6 relative z-10">
+        <nav class="max-w-7xl mx-auto flex justify-center md:justify-start">
+            <a href="../../index.html" class="flex items-center gap-2 group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neon group-hover:drop-shadow-[0_0_8px_rgba(0,255,204,0.8)] transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-2xl font-bold tracking-widest text-white group-hover:text-neon transition-colors">CYBER<span class="text-neon">SEC</span></span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex-grow flex items-center justify-center px-4 pb-12 relative z-10">
+        <section class="max-w-md w-full">
+            <article class="bg-dark border border-gray-800 rounded-xl p-8 shadow-[0_0_40px_rgba(0,0,0,0.8)] relative overflow-hidden backdrop-blur-sm bg-opacity-90">
+                
+                <!-- Glowing corner effect -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-neon opacity-20 blur-3xl rounded-full"></div>
+
+                <div class="text-center mb-8 relative z-10">
+                    <h1 class="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+                    <p class="text-gray-400 text-sm">Sign in to access your security dashboard.</p>
+                </div>
+
+                <form action="#" class="space-y-5 relative z-10">
+                    <!-- Email Input -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email Address</label>
+                        <input type="email" id="email" required class="w-full bg-darker border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors placeholder-gray-600" placeholder="admin@cybersec.com">
+                    </div>
+
+                    <!-- Password Input -->
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="password" class="block text-sm font-medium text-gray-400">Password</label>
+                            <a href="#" class="text-xs text-neon hover:underline">Forgot Password?</a>
+                        </div>
+                        <input type="password" id="password" required class="w-full bg-darker border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors placeholder-gray-600" placeholder="••••••••">
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="w-4 h-4 rounded bg-darker border-gray-700 text-neon cursor-pointer">
+                        <label for="remember" class="ml-2 text-sm text-gray-400 cursor-pointer">Remember me for 30 days</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-neon text-darker font-bold rounded px-4 py-3 hover:bg-white transition-all shadow-[0_0_15px_rgba(0,255,204,0.3)] hover:shadow-[0_0_25px_rgba(0,255,204,0.6)] mt-4">
+                        Secure Sign In
+                    </button>
+                </form>
+
+                <!-- Sign Up Link -->
+                <p class="mt-6 text-center text-sm text-gray-400 relative z-10">
+                    Don't have an account? 
+                    <a href="signup.html" class="text-neon font-semibold hover:underline">Create Account</a>
+                </p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
