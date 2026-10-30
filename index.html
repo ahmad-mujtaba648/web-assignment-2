@@ -7,6 +7,7 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
     <!-- Customizing Tailwind Colors for Cyber Security Theme -->
     <script>
@@ -165,6 +166,151 @@
 
             </div>
         </section>
+        <!-- ================= TASK 1: INCIDENT LOG CRUD & LOCAL STORAGE ================= -->
+        <!-- Student Info / Security Analyst Header -->
+        <div class="max-w-7xl mx-auto px-6 pt-10">
+            <div class="bg-dark/80 border border-neon/30 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_0_20px_rgba(0,255,204,0.1)]">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-neon/20 border border-neon flex items-center justify-center text-neon font-bold text-lg">
+                        AM
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-base">Ahmad Mujtaba</h4>
+                        <p class="text-neon text-xs font-mono">Lead Security Analyst </p>
+                    </div>
+                </div>
+                <div class="text-xs text-gray-400 font-mono bg-darker px-3 py-1.5 rounded border border-gray-800">
+                    STATUS: <span class="text-neon font-bold">AUTHENTICATED</span>
+                </div>
+            </div>
+        </div>
+        <section id="incident-manager" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-900 border border-gray-700 text-neon text-xs font-semibold uppercase tracking-wider mb-3">
+                    <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                 
+
+
+
+
+
+
+
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Security <span class="text-neon">Incident Logs</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm">Create, review, update, and manage network threat logs saved directly to Local Storage.</p>
+            </div>
+
+            <!-- Form Container -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 md:p-8 shadow-2xl mb-8">
+                <h3 id="formTitle" class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <span class="text-neon">&#9658;</span> Log New Incident
+                </h3>
+                
+                <form id="incidentForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <input type="hidden" id="editIncidentId" value="-1" />
+                    
+                    <div>
+                        <label for="threatTitle" class="block text-xs font-medium text-gray-400 mb-1">Incident Title / Threat</label>
+                        <input type="text" id="threatTitle" placeholder="e.g. DDoS Attack on DNS" required class="w-full bg-darker border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neon transition-colors" />
+                    </div>
+
+                    <div>
+                        <label for="threatCategory" class="block text-xs font-medium text-gray-400 mb-1">Attack Vector / Category</label>
+                        <select id="threatCategory" required class="w-full bg-darker border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neon transition-colors">
+                            <option value="">Select Category</option>
+                            <option value="Malware">Malware</option>
+                            <option value="Phishing">Phishing</option>
+                            <option value="DDoS">DDoS</option>
+                            <option value="Unauthorized Access">Unauthorized Access</option>
+                            <option value="Ransomware">Ransomware</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="threatSeverity" class="block text-xs font-medium text-gray-400 mb-1">Severity Level</label>
+                        <select id="threatSeverity" required class="w-full bg-darker border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neon transition-colors">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                            <option value="Critical">Critical</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-3 flex justify-end gap-3 pt-2">
+                        <button type="button" id="cancelEditBtn" class="hidden border border-gray-600 text-gray-300 px-5 py-2 rounded hover:text-white hover:border-gray-400 transition-colors">Cancel</button>
+                        <button type="submit" id="submitIncidentBtn" class="bg-neon text-darker font-bold px-6 py-2 rounded hover:bg-white transition-all shadow-[0_0_12px_rgba(0,255,204,0.3)]">Add Incident</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-6 items-center justify-between">
+                <div class="w-full sm:w-80 relative">
+                    <input type="text" id="incidentSearchInput" placeholder="Filter by title or category..." class="w-full bg-dark border border-gray-700 rounded px-4 py-2 pl-10 text-white focus:outline-none focus:border-neon transition-colors text-sm" />
+                    <svg class="w-4 h-4 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <div id="incidentCounter" class="text-sm text-gray-400 font-mono">0 Incidents Logged</div>
+            </div>
+
+            <!-- Records Table -->
+            <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden shadow-2xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead class="bg-gray-900 border-b border-gray-800 text-gray-300 font-mono uppercase text-xs">
+                            <tr>
+                                <th class="p-4">ID</th>
+                                <th class="p-4">Threat Description</th>
+                                <th class="p-4">Category</th>
+                                <th class="p-4">Severity</th>
+                                <th class="p-4 text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="incidentTableBody" class="divide-y divide-gray-800">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+       
+             <!-- ================= TASK 2: AXIOS EXTERNAL API INTEGRATION ================= -->
+        <section id="threat-feed" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-900 border border-gray-700 text-neon text-xs font-semibold uppercase tracking-wider mb-3">
+                    <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                  
+
+
+
+
+
+                    
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Live Security <span class="text-neon">Bulletins & Alerts</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm">Real-time threat reports retrieved dynamically via Axios GET requests.</p>
+            </div>
+
+            <!-- Dynamic Cards Grid -->
+            <div id="threatFeedGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cards yahan dynamically JS se ayenge -->
+            </div>
+        </section>
+        <!-- Bulletin Details Modal -->
+        <div id="bulletinModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+            <div class="bg-dark border border-neon/50 rounded-xl max-w-lg w-full p-6 shadow-[0_0_30px_rgba(0,255,204,0.3)] relative">
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-neon text-xl font-bold">&times;</button>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-darker border border-neon/40 text-neon text-xs font-semibold mb-4">
+                    <span id="modalId">CVE-ALERT</span>
+                </div>
+                <h3 id="modalTitle" class="text-xl font-bold text-white mb-3 capitalize">Threat Title</h3>
+                <p id="modalBody" class="text-gray-300 text-sm leading-relaxed mb-6">Threat Description</p>
+                <div class="text-right">
+                    <button onclick="closeModal()" class="bg-neon text-darker font-bold px-5 py-2 rounded text-sm hover:bg-white transition-all shadow-[0_0_10px_rgba(0,255,204,0.3)]">Close Advisory</button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer Section (Div replaced with footer) -->
@@ -238,5 +384,6 @@
             mobileMenu.classList.remove('flex');
         });
     </script>
+    <script src="app.js"></script>
 </body>
 </html>
